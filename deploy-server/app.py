@@ -10,8 +10,8 @@ def hook():
     
     subprocess.call(['sudo', 'docker', 'stop', prev_id])
     subprocess.call(['sudo', 'docker', 'rm', prev_id]) 
-    subprocess.call(['sudo', 'docker', 'build', '--no-cache', '-t',  'hannam', '/home/ubuntu/HB-docker'])
-    subprocess.call(['sudo', 'docker', 'run', '-d', '-p', '8888:3000', 'hannam'])
+    subprocess.call(['sudo', 'docker', 'build', '--no-cache', '-t',  'HbServer', '/home/ec2-user/HB-docker'])
+    subprocess.call(['sudo', 'docker', 'run', '-d', '-p', '8888:3000', 'HbServer'])
 
     print('hook!!')
     return "hook response \n"
